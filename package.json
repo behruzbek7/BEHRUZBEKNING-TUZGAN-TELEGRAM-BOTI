@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "telegram-bot-api": "^2.0.1"
-  },
   "name": "behruzbekning-tuzgan-telegram-boti",
   "version": "1.0.0",
   "description": "",
@@ -20,9 +17,13 @@
   "keywor`ds": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/behruzbek7/BEHRUZBEKNING-TUZGAN-TELEGRAM-BOTI/issues"
   },
-  "homepage": "https://github.com/behruzbek7/BEHRUZBEKNING-TUZGAN-TELEGRAM-BOTI#readme"
+  "homepage": "https://github.com/behruzbek7/BEHRUZBEKNING-TUZGAN-TELEGRAM-BOTI#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "node-telegram-bot-api": "^0.66.0"
+  }
 }
