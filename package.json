@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "telegram-bot-api": "^2.0.1"
+  },
+  "name": "behruzbekning-tuzgan-telegram-boti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "not.js",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  },
+  "scripts": {
+    "start": "node not.js",
+    "dev": "nodemon not.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behruzbek7/BEHRUZBEKNING-TUZGAN-TELEGRAM-BOTI.git"
+  },
+  "keywor`ds": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/behruzbek7/BEHRUZBEKNING-TUZGAN-TELEGRAM-BOTI/issues"
+  },
+  "homepage": "https://github.com/behruzbek7/BEHRUZBEKNING-TUZGAN-TELEGRAM-BOTI#readme"
+}
