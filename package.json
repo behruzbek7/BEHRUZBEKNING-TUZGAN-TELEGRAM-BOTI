@@ -2,13 +2,13 @@
   "name": "behruzbekning-tuzgan-telegram-boti",
   "version": "1.0.0",
   "description": "",
-  "main": "not.js",
+  "main": "index.js",
   "devDependencies": {
     "nodemon": "^3.1.11"
   },
   "scripts": {
-    "start": "node not.js",
-    "dev": "nodemon not.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
