@@ -12,7 +12,7 @@ async function connectDb() {
       console.log(`Db is connected...`);
     })
     .catch(() => {
-      console.log(`Error: Db is not connected...`);
+      console.log(` Db is not connected...`);
     });
 }
 
