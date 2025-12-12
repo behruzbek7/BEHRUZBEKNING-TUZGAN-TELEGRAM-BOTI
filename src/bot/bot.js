@@ -4,7 +4,7 @@ import onCommands from "./handlers/message/onCommands.js";
 import onError from "./handlers/message/onError.js";
 dotenv.config();
 
-const CHANNEL_ID = "@academy_100x_uz";
+const CHANNEL_ID = "@IT_Park91";
 
 export const bot = new TelegramBot(process.env.BOT_TOKEN, { polling: true });
 
@@ -14,35 +14,44 @@ bot.on("message", async function (msg) {
   const firstname = msg.chat.first_name;
   const text = msg.text;
 
-  const chatMember = await bot.getChatMember(CHANNEL_ID, chatId);
+  try {
+    const chatMember = await bot.getChatMember(CHANNEL_ID, chatId);
+    console.log(chatMember);
 
-  console.log(chatMember);
 
-  if (chatMember.status == "kicked" || chatMember.status == "left") {
-    return bot.sendMessage(
-      chatId,
-      `Oldin shu kanalga obuna bo'ling @academy_100x_uz`,
-      {
-        reply_markup: {
-          remove_keyboard: true,
-          inline_keyboard: [
-            [
-              {
-                text: "100x Academy Xiva",
-                url: "https://t.me/academy_100x_uz",
-              },
+    if (chatMember.status == "kicked" || chatMember.status == "left") {
+      return bot.sendMessage(
+        chatId,
+        `Oldin shu kanalga obuna bo'ling @https://t.me/IT_Park91`,
+        {
+          reply_markup: {
+            remove_keyboard: true,
+            inline_keyboard: [
+              [
+                {
+                  text: "100x Academy Xiva",
+                  url: "https://t.me/IT_Park91",
+                },
+              ],
+              [
+                {
+                  text: "Obunani tasdiqlash ✅",
+                  callback_data: "confirm_subscription",
+                },
+              ],
             ],
-            [
-              {
-                text: "Obunani tasdiqlash ✅",
-                callback_data: "confirm_subscription",
-              },
-            ],
-          ],
-        },
-      }
-    );
+          },
+        }
+      );
+    }
+
+  } catch {
+    console.log(`ERROR: error in checking if user subscribed to channel `);
+    
   }
+
+
+
 
   if (text.startsWith("/")) {
     return onCommands(msg);

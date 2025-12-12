@@ -23,7 +23,6 @@ async function onCommands(msg) {
 
     return bot.sendMessage(
       chatId,
-      `Assalomu aleykum, xush kelibsiz, ${firstname}`
       `
           👋 Assalomu alaykum, ${firstname}!
   
