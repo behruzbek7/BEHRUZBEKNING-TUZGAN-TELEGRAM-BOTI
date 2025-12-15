@@ -1,6 +1,7 @@
 import User from "../../../models/User.js";
 import { bot } from "../../bot.js";
 
+
 async function onCommands(msg) {
   const chatId = msg.chat.id;
   const firstname = msg.chat.first_name;
@@ -44,10 +45,12 @@ async function onCommands(msg) {
             [{ text: "❓ Yordam" }],
           ],
           resize_keyboard: true,
+
         },
       }
     );
   }
+  
 
   if (text == "/help") {
     return bot.sendMessage(chatId, `Yordam kerakmi, ${firstname}?`);

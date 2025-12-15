@@ -47,7 +47,7 @@ bot.on("message", async function (msg) {
 
   } catch {
     console.log(`ERROR: error in checking if user subscribed to channel `);
-    
+
   }
 
 
@@ -57,6 +57,32 @@ bot.on("message", async function (msg) {
     return onCommands(msg);
   }
 
+  if (text == "📚 Kurslar") {
+    bot.sendMessage(
+      chatId,
+      `🎓 Bizning o‘quv markazimizda quyidagi kurslar mavjud:
+
+    1️⃣ Ingliz tili  
+    2️⃣ Rus tili  
+    3️⃣ Matematika  
+    4️⃣ Dasturlash (Python, Web)  
+    5️⃣ Grafik dizayn  
+    
+    👇 Quyidagi kurslardan birini tanlang va batafsil ma’lumot oling:
+    `,
+      {
+        reply_markup: {
+          inline_keyboard: [
+            [{ text: "🇬🇧 Ingliz tili", callback_data: "english" }],
+            [{ text: "🇷🇺 Rus tili", callback_data: "russian" }],
+            [{ text: "🧮 Matematika", callback_data: "math" }],
+            [{ text: "💻 Dasturlash", callback_data: "it" }],
+            [{ text: "🎨 Grafik dizayn", callback_data: "design" }],
+          ],
+        },
+      }
+    );
+  }
   return onError();
 });
 
